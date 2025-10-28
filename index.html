@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎬 Movie Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Personalized Movie Recommender</h1>
+    <div class="form-group">
+      <label>Age:</label>
+      <input type="number" id="age" placeholder="Enter your age" />
+    </div>
+
+    <div class="form-group">
+      <label>Interests:</label>
+      <input type="text" id="interests" placeholder="e.g. action, comedy, sci-fi" />
+    </div>
+
+    <div class="form-group">
+      <label>Favorite Movie:</label>
+      <input type="text" id="fav_movie" placeholder="Enter one favorite movie" />
+    </div>
+
+    <button onclick="getRecommendations()">Get Recommendations</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
